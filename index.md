@@ -1,8 +1,8 @@
-## A simple Graph maker for Social Network Analysis 
+## A simple Table maker for Social Network Analysis 
 
 ## Introduction 
 
-This project is a simpler graph maker for social network analysis. Social network analysis is the study of structure, and how it influences health, and it it is based on theorical construct of sociology and mathematical foundations of graph theory. Structure refers to the regularities in the pattering of relationships among individuals, groups and/or organizations. 
+This project is a simpler table maker for social network analysis. Social network analysis is the study of structure, and how it influences health, and it it is based on theorical construct of sociology and mathematical foundations of graph theory. Structure refers to the regularities in the pattering of relationships among individuals, groups and/or organizations. 
 
 ## Implementation 
 
