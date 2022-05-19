@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+## A simple Graph maker for Social Network Analysis 
 
-You can use the [editor on GitHub](https://github.com/JonathanFigueroa1/PL-Project-MathInterpetrer/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Introduction 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This project is a simpler graph maker for social network analysis. Social network analysis is the study of structure, and how it influences health, and it it is based on theorical construct of sociology and mathematical foundations of graph theory. Structure refers to the regularities in the pattering of relationships among individuals, groups and/or organizations. 
 
-### Markdown
+## Implementation 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This project have a parser and lexer implemented using PLY, and the use of the open source NetworkX library that is a package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. 
 
-```markdown
-Syntax highlighted code block
+## Video of the Project 
+<p-align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GNxk2s8rKco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
-# Header 1
-## Header 2
-### Header 3
+## Creator 
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JonathanFigueroa1/PL-Project-MathInterpetrer/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+1. Jonathan Figueroa Perez
