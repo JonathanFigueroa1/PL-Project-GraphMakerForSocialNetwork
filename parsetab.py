@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'leftPLUSMINUSleftMULTIPLYDIVIDEDIVIDE EQUALS FLOAT INT MINUS MULTIPLY NAME PLUS\n    calculator : expression\n               | var_assign\n               | empty\n    \n    \n    var_assign : NAME EQUALS expression \n    \n    expression : expression MULTIPLY expression\n               | expression MINUS expression \n               | expression PLUS expression \n               | expression DIVIDE expression \n    \n    expression : INT\n               | FLOAT\n    \n    \n    \n    expression : NAME\n\n    \n    empty :\n    '
+_lr_signature = 'Analysis BINOP CHARACTER COMMA CREATE DISPLAY DOT ELSE FOR FROM ID IF IN LEFTDELIMITER LEFTSLASHES MINUS NODE OPERATIONS PLUS RIGHTDELIMITER RIGHTSLASHES SEPARATOR WHILEdefine : Analysis functionfunction : term\n               | FOR LEFTSLASHES term IN term RIGHTSLASHES function\n               | WHILE LEFTSLASHES term BINOP term RIGHTSLASHES termadd : graph PLUS LEFTDELIMITER file RIGHTDELIMITER\n            | graph PLUS IDcreate : CREATE LEFTSLASHES ID RIGHTSLASHES\n                | CREATE LEFTSLASHES ID FROM file RIGHTSLASHES\n                | CREATEremove : graph MINUS nodedisplay : DISPLAY graphoperations : graph OPERATIONSgraph : IDfile : ID DOT IDnode : NODE IDterm : add\n            | remove\n            | display\n            | file\n            | graph\n            | node\n            | create\n            | operations'
     
-_lr_action_items = {'INT':([0,8,9,10,11,12,],[5,5,5,5,5,5,]),'FLOAT':([0,8,9,10,11,12,],[6,6,6,6,6,6,]),'NAME':([0,8,9,10,11,12,],[7,14,14,14,14,14,]),'$end':([0,1,2,3,4,5,6,7,13,14,15,16,17,18,],[-12,0,-1,-2,-3,-9,-10,-11,-5,-11,-6,-7,-8,-4,]),'MULTIPLY':([2,5,6,7,13,14,15,16,17,18,],[8,-9,-10,-11,-5,-11,8,8,-8,8,]),'MINUS':([2,5,6,7,13,14,15,16,17,18,],[9,-9,-10,-11,-5,-11,-6,-7,-8,9,]),'PLUS':([2,5,6,7,13,14,15,16,17,18,],[10,-9,-10,-11,-5,-11,-6,-7,-8,10,]),'DIVIDE':([2,5,6,7,13,14,15,16,17,18,],[11,-9,-10,-11,-5,-11,11,11,-8,11,]),'EQUALS':([7,],[12,]),}
+_lr_action_items = {'Analysis':([0,],[2,]),'$end':([1,3,4,7,8,9,10,11,12,13,14,15,18,23,25,26,27,32,33,34,40,44,48,49,50,],[0,-1,-2,-16,-17,-18,-19,-20,-21,-22,-23,-13,-9,-12,-11,-13,-15,-6,-10,-14,-7,-5,-8,-3,-4,]),'FOR':([2,46,],[5,5,]),'WHILE':([2,46,],[6,6,]),'DISPLAY':([2,19,20,36,37,46,47,],[16,16,16,16,16,16,16,]),'ID':([2,16,17,19,20,21,24,28,31,36,37,41,46,47,],[15,26,27,15,15,32,34,35,39,15,15,39,15,15,]),'NODE':([2,19,20,22,36,37,46,47,],[17,17,17,17,17,17,17,17,]),'CREATE':([2,19,20,36,37,46,47,],[18,18,18,18,18,18,18,]),'LEFTSLASHES':([5,6,18,],[19,20,28,]),'IN':([7,8,9,10,11,12,13,14,15,18,23,25,26,27,29,32,33,34,40,44,48,],[-16,-17,-18,-19,-20,-21,-22,-23,-13,-9,-12,-11,-13,-15,36,-6,-10,-14,-7,-5,-8,]),'BINOP':([7,8,9,10,11,12,13,14,15,18,23,25,26,27,30,32,33,34,40,44,48,],[-16,-17,-18,-19,-20,-21,-22,-23,-13,-9,-12,-11,-13,-15,37,-6,-10,-14,-7,-5,-8,]),'RIGHTSLASHES':([7,8,9,10,11,12,13,14,15,18,23,25,26,27,32,33,34,35,40,42,43,44,45,48,],[-16,-17,-18,-19,-20,-21,-22,-23,-13,-9,-12,-11,-13,-15,-6,-10,-14,40,-7,46,47,-5,48,-8,]),'PLUS':([11,15,],[21,-13,]),'MINUS':([11,15,],[22,-13,]),'OPERATIONS':([11,15,],[23,-13,]),'DOT':([15,39,],[24,24,]),'LEFTDELIMITER':([21,],[31,]),'RIGHTDELIMITER':([34,38,],[-14,44,]),'FROM':([35,],[41,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -17,7 +17,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'calculator':([0,],[1,]),'expression':([0,8,9,10,11,12,],[2,13,15,16,17,18,]),'var_assign':([0,],[3,]),'empty':([0,],[4,]),}
+_lr_goto_items = {'define':([0,],[1,]),'function':([2,46,],[3,49,]),'term':([2,19,20,36,37,46,47,],[4,29,30,42,43,4,50,]),'add':([2,19,20,36,37,46,47,],[7,7,7,7,7,7,7,]),'remove':([2,19,20,36,37,46,47,],[8,8,8,8,8,8,8,]),'display':([2,19,20,36,37,46,47,],[9,9,9,9,9,9,9,]),'file':([2,19,20,31,36,37,41,46,47,],[10,10,10,38,10,10,45,10,10,]),'graph':([2,16,19,20,36,37,46,47,],[11,25,11,11,11,11,11,11,]),'node':([2,19,20,22,36,37,46,47,],[12,12,12,33,12,12,12,12,]),'create':([2,19,20,36,37,46,47,],[13,13,13,13,13,13,13,]),'operations':([2,19,20,36,37,46,47,],[14,14,14,14,14,14,14,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -26,17 +26,28 @@ for _k, _v in _lr_goto_items.items():
        _lr_goto[_x][_k] = _y
 del _lr_goto_items
 _lr_productions = [
-  ("S' -> calculator","S'",1,None,None,None),
-  ('calculator -> expression','calculator',1,'p_calculator','Calculator.py',58),
-  ('calculator -> var_assign','calculator',1,'p_calculator','Calculator.py',59),
-  ('calculator -> empty','calculator',1,'p_calculator','Calculator.py',60),
-  ('var_assign -> NAME EQUALS expression','var_assign',3,'p_var_assign','Calculator.py',67),
-  ('expression -> expression MULTIPLY expression','expression',3,'p_expression','Calculator.py',73),
-  ('expression -> expression MINUS expression','expression',3,'p_expression','Calculator.py',74),
-  ('expression -> expression PLUS expression','expression',3,'p_expression','Calculator.py',75),
-  ('expression -> expression DIVIDE expression','expression',3,'p_expression','Calculator.py',76),
-  ('expression -> INT','expression',1,'p_expression_int_float','Calculator.py',82),
-  ('expression -> FLOAT','expression',1,'p_expression_int_float','Calculator.py',83),
-  ('expression -> NAME','expression',1,'p_expression_var','Calculator.py',91),
-  ('empty -> <empty>','empty',0,'p_empty','Calculator.py',101),
+  ("S' -> define","S'",1,None,None,None),
+  ('define -> Analysis function','define',2,'p_define','Analysis.py',75),
+  ('function -> term','function',1,'p_function','Analysis.py',80),
+  ('function -> FOR LEFTSLASHES term IN term RIGHTSLASHES function','function',7,'p_function','Analysis.py',81),
+  ('function -> WHILE LEFTSLASHES term BINOP term RIGHTSLASHES term','function',7,'p_function','Analysis.py',82),
+  ('add -> graph PLUS LEFTDELIMITER file RIGHTDELIMITER','add',5,'p_add','Analysis.py',93),
+  ('add -> graph PLUS ID','add',3,'p_add','Analysis.py',94),
+  ('create -> CREATE LEFTSLASHES ID RIGHTSLASHES','create',4,'p_create','Analysis.py',104),
+  ('create -> CREATE LEFTSLASHES ID FROM file RIGHTSLASHES','create',6,'p_create','Analysis.py',105),
+  ('create -> CREATE','create',1,'p_create','Analysis.py',106),
+  ('remove -> graph MINUS node','remove',3,'p_remove','Analysis.py',115),
+  ('display -> DISPLAY graph','display',2,'p_display','Analysis.py',119),
+  ('operations -> graph OPERATIONS','operations',2,'p_operations','Analysis.py',123),
+  ('graph -> ID','graph',1,'p_graph','Analysis.py',127),
+  ('file -> ID DOT ID','file',3,'p_file','Analysis.py',131),
+  ('node -> NODE ID','node',2,'p_node','Analysis.py',134),
+  ('term -> add','term',1,'p_term','Analysis.py',138),
+  ('term -> remove','term',1,'p_term','Analysis.py',139),
+  ('term -> display','term',1,'p_term','Analysis.py',140),
+  ('term -> file','term',1,'p_term','Analysis.py',141),
+  ('term -> graph','term',1,'p_term','Analysis.py',142),
+  ('term -> node','term',1,'p_term','Analysis.py',143),
+  ('term -> create','term',1,'p_term','Analysis.py',144),
+  ('term -> operations','term',1,'p_term','Analysis.py',145),
 ]
